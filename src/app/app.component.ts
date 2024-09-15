@@ -1,13 +1,15 @@
 import { Component } from '@angular/core';
+import { EmployeeListComponent } from './employee-list/employee-list.component';
+import { EmployeeFormComponent } from './employee-form/employee-form.component'; // Import the standalone component
 import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css'],
+  standalone: true,
+  imports: [EmployeeFormComponent,RouterOutlet] // Include the standalone component here
 })
 export class AppComponent {
-  title = 'employee-management';
+  title = 'your-app-title';
 }
